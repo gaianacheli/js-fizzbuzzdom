@@ -4,17 +4,21 @@ per i multipli di 3, per i multipli di 5 e per i valori che sono sia multipli di
 
 const list = document.querySelector ('.list')
 
-for (let i= 1; i <= 100; i++){
-    if (i % 3 == 0) {
-        document.write('ciao')
-    }else if (i % 5 == 0){
-        document.write('bello')
-    }else if  ((i % 3 == 0 )&& (i % 5 == 0)){
-        document.write('buono')
 
-    }else {
-        document.write(i)
+for (let i= 1; i <= 100; i++){
+    let boxContent = i
+    if (i % 3 == 0) {
+        boxContent = 'ciao'
+    }else if (i % 5 == 0){
+        boxContent = 'buono'
+    }else if  ((i % 3 == 0 )&& (i % 5 == 0)){
+        boxContent = 'bello'
     }
+    const numberBox = `<li class="box"> ${boxContent} </li>`
+    list.insertAdjacentHTML('beforeend', numberBox)
 }
+
+
+
+
     
-   
