@@ -8,7 +8,7 @@ body {
 }
 .container {
     width: 100%;
-    padding: 5rem;
+    padding: 1rem 5rem;
 }
 .list {
     list-style: none;
@@ -24,4 +24,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.titolo {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 2rem;
+}
+.green {
+    background-color: rgba(97, 210, 164, 1);
+}
+.red {
+    background-color:rgba(222, 84, 113, 1) ;
+}
+.yellow {
+    background-color: rgba(249, 210, 119, 1);
 }

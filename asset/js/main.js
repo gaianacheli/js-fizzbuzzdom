@@ -4,21 +4,23 @@ per i multipli di 3, per i multipli di 5 e per i valori che sono sia multipli di
 
 const list = document.querySelector ('.list')
 
-
 for (let i= 1; i <= 100; i++){
     let boxContent = i
-    if (i % 3 == 0) {
-        boxContent = 'ciao'
+    let className = ""
+    if (i % 3 == 0 && i % 5 == 0){
+        boxContent = 'FrizzBuzz'
+        className = 'red'
     }else if (i % 5 == 0){
-        boxContent = 'buono'
-    }else if  ((i % 3 == 0 )&& (i % 5 == 0)){
-        boxContent = 'bello'
+        boxContent = 'Buzz'
+        className = 'yellow'
+    }else if  ( i % 3 == 0) {
+        boxContent = 'Frizz'
+        className = 'green'
     }
-    const numberBox = `<li class="box"> ${boxContent} </li>`
-    list.insertAdjacentHTML('beforeend', numberBox)
+    const numberBox = `<li class="box ${className}"> ${boxContent} </li>`
+    list.insertAdjacentHTML('beforeend', numberBox)    
 }
 
 
 
 
-    
